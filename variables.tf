@@ -66,7 +66,7 @@ variable "lambda_function_zip_filename" {
 
 variable "lambda_function_version" {
   type        = string
-  default     = "0.0.1"
+  default     = "0.0.2"
   description = "Version of lambda function. See https://github.com/lablabs/aws-asg-lambda/releases"
 }
 

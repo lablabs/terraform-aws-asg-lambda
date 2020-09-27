@@ -5,6 +5,8 @@ locals {
 }
 
 resource "null_resource" "lambda_zip" {
+  count = var.enabled ? 1 : 0
+
   triggers = {
     url : var.lambda_function_zip_base_url
     filename : var.lambda_function_zip_filename
@@ -17,10 +19,12 @@ resource "null_resource" "lambda_zip" {
 }
 
 resource "aws_lambda_function" "self" {
+  count = var.enabled ? 1 : 0
+
   function_name = module.label.id
   filename      = local.lambda_zip_file_path
 
-  role        = aws_iam_role.self.arn
+  role        = aws_iam_role.self[0].arn
   handler     = "main.handle"
   description = "ASG lambda triggered by ASG EC2 Instance-launch Lifecycle Action"
   memory_size = 128
@@ -51,9 +55,11 @@ resource "aws_lambda_function" "self" {
 }
 
 resource "aws_lambda_permission" "self" {
+  count = var.enabled ? 1 : 0
+
   statement_id  = "${module.label.id}-AllowExecutionFromCloudWatch"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.self.function_name
+  function_name = aws_lambda_function.self[0].function_name
   principal     = "events.amazonaws.com"
-  source_arn    = aws_cloudwatch_event_rule.self.arn
+  source_arn    = aws_cloudwatch_event_rule.self[0].arn
 }

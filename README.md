@@ -61,7 +61,7 @@ See [Basic example](examples/basic/README.md) for further information.
 | eni\_tag\_filter\_value | Value of the ENI tag for resource filtering | `string` | `""` | no |
 | environment | Environment, e.g. 'prod', 'staging', 'dev', 'pre-prod', 'UAT' | `string` | `""` | no |
 | lambda\_asg\_target\_names | List of ASG names for lambda invocation | `list(string)` | `[]` | no |
-| lambda\_function\_version | Version of lambda function. See https://github.com/lablabs/aws-asg-lambda/releases | `string` | `"0.0.1"` | no |
+| lambda\_function\_version | Version of lambda function. See https://github.com/lablabs/aws-asg-lambda/releases | `string` | `"0.0.2"` | no |
 | lambda\_function\_zip\_base\_url | Base URL of zip file with lambda function code. Path part with version number (see `lambda_function_version` variable) will be added automatically) | `string` | `"https://github.com/lablabs/terraform-aws-asg-lambda/releases/download/"` | no |
 | lambda\_function\_zip\_filename | Filename of zip file with lambda function code. Version number (see `lambda_function_version` variable) and `.zip` extension will be added automatically. | `string` | `"aws-asg-lambda-"` | no |
 | lambda\_log\_retention | Specifies the number of days you want to retain lambda log events. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653, and 0. If you select 0, the events in the log group are always retained and never expire. | `string` | `0` | no |

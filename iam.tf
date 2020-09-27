@@ -1,6 +1,8 @@
 resource "aws_iam_role_policy" "self" {
+  count = var.enabled ? 1 : 0
+
   name = module.label.id
-  role = aws_iam_role.self.id
+  role = aws_iam_role.self[0].id
 
   # FIXME: POLP (principle of least privilege)
   policy = <<EOF
@@ -23,6 +25,8 @@ EOF
 }
 
 resource "aws_iam_role" "self" {
+  count = var.enabled ? 1 : 0
+
   name = module.label.id
 
   assume_role_policy = <<EOF
