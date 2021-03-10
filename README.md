@@ -36,48 +36,7 @@ URL: https://github.com/lablabs/aws-sf-lambda
 See [Basic example](examples/basic/README.md) for further information.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Requirements
-
-| Name | Version |
-|------|---------|
-| terraform | >= 0.12, < 0.14 |
-| aws | >= 2.0, < 4.0 |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| attributes | Additional attributes (e.g. `1`) | `list(string)` | `[]` | no |
-| ebs\_attach | Whetever to attach EBS volume to instance or not | `bool` | `false` | no |
-| ebs\_device\_name | The device name to expose to the instance | `string` | `"/dev/xvdz"` | no |
-| ebs\_tag\_filter\_name | Name of the EBS tag name for resource filtering | `string` | `""` | no |
-| ebs\_tag\_filter\_value | Value of the EBS tag for resource filtering | `string` | `""` | no |
-| eip\_attach | Whetever to attach EIP to instance or not | `bool` | `false` | no |
-| eip\_tag\_filter\_name | Name of the EIP tag name for resource filtering | `string` | `""` | no |
-| eip\_tag\_filter\_value | Value of the EIP tag for resource filtering | `string` | `""` | no |
-| enabled | Set to false to prevent the module from creating any resources | `bool` | `true` | no |
-| eni\_attach | Whetever to attach ENI to instance or not | `bool` | `false` | no |
-| eni\_tag\_filter\_name | Name of the ENI tag name for resource filtering | `string` | `""` | no |
-| eni\_tag\_filter\_value | Value of the ENI tag for resource filtering | `string` | `""` | no |
-| environment | Environment, e.g. 'prod', 'staging', 'dev', 'pre-prod', 'UAT' | `string` | `""` | no |
-| lambda\_asg\_target\_names | List of ASG names for lambda invocation | `list(string)` | `[]` | no |
-| lambda\_function\_version | Version of lambda function. See https://github.com/lablabs/aws-asg-lambda/releases | `string` | `"0.0.2"` | no |
-| lambda\_function\_zip\_base\_url | Base URL of zip file with lambda function code. Path part with version number (see `lambda_function_version` variable) will be added automatically) | `string` | `"https://github.com/lablabs/terraform-aws-asg-lambda/releases/download/"` | no |
-| lambda\_function\_zip\_filename | Filename of zip file with lambda function code. Version number (see `lambda_function_version` variable) and `.zip` extension will be added automatically. | `string` | `"aws-asg-lambda-"` | no |
-| lambda\_log\_retention | Specifies the number of days you want to retain lambda log events. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653, and 0. If you select 0, the events in the log group are always retained and never expire. | `string` | `0` | no |
-| name | Solution name, e.g. 'app' or 'jenkins' | `string` | `""` | no |
-| namespace | Namespace, which could be your organization name or abbreviation, e.g. 'eg' or 'cp' | `string` | `""` | no |
-| stage | Stage, e.g. 'prod', 'staging', 'dev', OR 'source', 'build', 'test', 'deploy', 'release' | `string` | `""` | no |
-| tags | Additional tags (e.g. `map('BusinessUnit','XYZ')` | `map(string)` | `{}` | no |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| cloudwatch\_event\_rule\_attributes | CloudWatch Event Rule resource attributes |
-| labmda\_iam\_role\_attributes | Lambda iam role attributes |
-| lambda\_function\_attributes | ASG lambda attributes |
-
+Error: unknown flag: --hide
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Contributing and reporting issues
 
