@@ -40,8 +40,37 @@ See [Basic example](examples/basic/README.md) for further information.
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12, < 0.14 |
-| aws | >= 2.0, < 4.0 |
+| terraform | >= 0.13 |
+| aws | >= 2.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | >= 2.0 |
+| null | n/a |
+| template | n/a |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| label | cloudposse/label/null | 0.24.1 |
+
+## Resources
+
+| Name |
+|------|
+| [aws_autoscaling_lifecycle_hook](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_lifecycle_hook) |
+| [aws_cloudwatch_event_rule](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule) |
+| [aws_cloudwatch_event_target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_target) |
+| [aws_cloudwatch_log_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) |
+| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) |
+| [aws_iam_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) |
+| [aws_lambda_function](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) |
+| [aws_lambda_permission](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_permission) |
+| [null_resource](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) |
+| [template_file](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) |
 
 ## Inputs
 
@@ -77,7 +106,6 @@ See [Basic example](examples/basic/README.md) for further information.
 | cloudwatch\_event\_rule\_attributes | CloudWatch Event Rule resource attributes |
 | labmda\_iam\_role\_attributes | Lambda iam role attributes |
 | lambda\_function\_attributes | ASG lambda attributes |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Contributing and reporting issues
 
